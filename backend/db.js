@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 
 module.exports = async () => {
@@ -15,7 +16,7 @@ module.exports = async () => {
             connectionParams.pass = process.env.MONGO_PASSWORD;
         }
         await mongoose.connect(
-           process.env.MONGO_CONN_STR,
+            process.env.MONGO_CONN_STR,
            connectionParams
         );
         console.log("Connected to database.");
