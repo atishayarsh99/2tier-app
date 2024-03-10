@@ -4,7 +4,10 @@ import { Paper, TextField, Checkbox, Button } from "@material-ui/core";
 import "./App.css"; // Update your CSS file accordingly
 
 class App extends Tasks {
-    state = { tasks: [], currentTask: "" };
+    constructor(props) {
+        super(props);
+        this.state = { tasks: [], currentTask: "" };
+    };
 
     render() {
         const { tasks, currentTask } = this.state;
@@ -54,4 +57,3 @@ class App extends Tasks {
 }
 
 export default App;
-
